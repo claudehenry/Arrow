@@ -1,0 +1,25 @@
+++> This is sample code, and this language is a
+++> bag of aids. Use at your own personal risk.
+
+use std
+
+class Test <: Obj ==>
+
+	member let twenty <- 20 <: Int
+	
+	member some_random_int <- 12 <: Int
+	member rndf <- Float(std->rnd) / std->rnd_max <: Float
+	
+	func sayHello => String greeting | String name => Void
+		std->printf greeting + " " + name + "! How are you today?"
+		return
+	
+	let func getTwenty => Int
+		return me -> twenty
+		
+
+test = Test[Void] <: Test
+
+assert(test->getTwenty is 20) : std->exit 1
+
+test->sayHello "Fuck you want ma m8" "Tim"

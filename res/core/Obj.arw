@@ -1,0 +1,9 @@
+++>
+
+class Obj ==>
+	
+	init <: Obj
+		return me
+	
+	member func str <: String
+		return me->typename
